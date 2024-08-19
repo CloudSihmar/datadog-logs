@@ -1,0 +1,113 @@
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Error connecting to database",
+        "ddtags": "env:production,level:error,service:database-service",
+        "hostname": "db-server-01",
+        "service": "database"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "User logged in successfully",
+        "ddtags": "env:staging,level:info,service:user-auth",
+        "hostname": "auth-server-01",
+        "service": "user-authentication"
+      }'
+
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Disk space running low",
+        "ddtags": "env:production,level:warning,host:server-42,service:monitoring",
+        "hostname": "monitor-server-42",
+        "service": "system-monitor"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Cache invalidation successful",
+        "ddtags": "env:development,level:debug,app:cache-service",
+        "hostname": "cache-server-01",
+        "service": "cache-invalidation"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Suspicious login attempt detected",
+        "ddtags": "env:production,level:critical,security:true,service:auth-service",
+        "hostname": "auth-server-02",
+        "service": "authentication"
+      }'
+
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "User profile updated",
+        "ddtags": "env:production,level:info,version:3.4.1,service:user-profile",
+        "hostname": "user-server-01",
+        "service": "user-profile"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Payment transaction completed",
+        "ddtags": "env:production,level:info,transaction_id:12345,service:payment-gateway",
+        "hostname": "payment-server-01",
+        "service": "payment-processing"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Deployment successful",
+        "ddtags": "env:production,level:info,deployed_by:jenkins,service:deploy-service",
+        "hostname": "deploy-server-01",
+        "service": "deployment"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "Backup completed successfully",
+        "ddtags": "env:production,level:info,backup_type:full,service:backup-service",
+        "hostname": "backup-server-01",
+        "service": "backup"
+      }'
+
+
+curl -X POST "https://http-intake.logs.datadoghq.com/v1/input" \
+  -H "Content-Type: application/json" \
+  -H "DD-API-KEY: 2b7dc3ef08228b6d5a7ef4f550ca94e1" \
+  -d '{
+        "message": "API request processed",
+        "ddtags": "env:production,level:info,endpoint:/api/v1/resource,service:api-service",
+        "hostname": "api-server-01",
+        "service": "api"
+      }'
+
+
+
